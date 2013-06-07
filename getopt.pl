@@ -6,9 +6,9 @@ use 5.010;
 use strict;
 use warnings; 
 use Getopt::Long;
+use Data::Dumper;
 
-my $debug	= 0;
-my $help	= 0;
+my ($debug, $help) =(0, 0);
 
 # Arguments
 my $result = GetOptions(
@@ -24,3 +24,5 @@ print <<__HELP__;
 __HELP__
 	exit 0;
 }
+
+say Dumper $debug, $help; 
